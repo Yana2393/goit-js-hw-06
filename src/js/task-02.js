@@ -10,12 +10,12 @@ const ingredients = [
 const ingredientsListEl = document.querySelector('#ingredients');
 console.log(ingredientsListEl);
 
-ingredients.forEach(ingredient => {
+const newArray = ingredients.map(ingredient => {
   const ingredientsItem = document.createElement("li");
   ingredientsItem.classList.add('item');
   ingredientsItem.textContent = ingredient;
-  ingredientsListEl.append(ingredientsItem);
+
+  return ingredientsItem.outerHTML.toString();
 })
 
-
-
+ingredientsListEl.insertAdjacentHTML('beforeend', newArray.join(''));

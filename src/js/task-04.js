@@ -2,14 +2,23 @@ const decrementButton = document.querySelector('button[data-action="decrement"]'
 
 const incrementButton = document.querySelector('button[data-action="increment"]');
 
-let counterValue = 0;
+let decrementButtonCounterValue = 0;
+let incrementButtonCounterValue = 0;
 
 decrementButton.addEventListener('click', () => {
-    counterValue--;
-    console.log(counterValue);
+    decrementButtonCounterValue--;
+    console.log(decrementButtonCounterValue);
+    decrementButton.textContent = decrementButtonCounterValue;
+
 });
 incrementButton.addEventListener('click', () => {
-    counterValue++;
-    console.log(counterValue);
+    incrementButtonCounterValue++;
+    console.log(incrementButtonCounterValue);
+    incrementButton.textContent = incrementButtonCounterValue;
+
 });
+
+
+
+
 
